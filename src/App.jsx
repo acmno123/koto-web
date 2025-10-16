@@ -14,13 +14,13 @@ export default function App() {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow max-w-6xl mx-auto p-6 w-full">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/features" element={<Features />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/invite" element={<Invite />} />
-          </Routes>
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/features" element={<Features />} />
+  <Route path="/gallery" element={<Gallery />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/invite" element={<Invite />} />
+</Routes>
         </main>
         <Footer />
       </div>

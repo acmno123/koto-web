@@ -22,19 +22,3 @@ export default function Features(){
     </section>
   )
 }
-import { motion } from 'framer-motion'
-
-export default function FeatureCard({ title, description }) {
-  return (
-    <motion.div
-      className="p-6 bg-white rounded-xl shadow-lg hover:shadow-2xl transition cursor-pointer"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-    >
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-slate-500">{description}</p>
-    </motion.div>
-  )
-}

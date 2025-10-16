@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
 
+
 export default function Home() {
   const particlesInit = async (main) => {
     await loadFull(main)

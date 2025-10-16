@@ -4,7 +4,6 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Features from './pages/Features'
-import Pricing from './pages/Pricing'
 import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Invite from './pages/Invite'
@@ -18,7 +17,6 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/features" element={<Features />} />
-            <Route path="/pricing" element={<Pricing />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/about" element={<About />} />
             <Route path="/invite" element={<Invite />} />

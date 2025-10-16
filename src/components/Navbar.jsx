@@ -22,6 +22,13 @@ export default function Navbar() {
           <Link to="/gallery" className="text-sm hover:underline">Gallery</Link>
           <Link to="/about" className="text-sm hover:underline">About</Link>
           <Link to="/invite" className="text-sm hover:underline">Invite</Link>
+          <Link
+  to="/features"
+  className="text-sm hover:text-sky-600 hover:scale-105 transition-transform duration-200"
+>
+  Features
+</Link>
+
           <a href={invite} target="_blank" rel="noreferrer" className="ml-3 px-4 py-2 bg-sky-600 text-white rounded-lg">Invite</a>
         </nav>
       </div>

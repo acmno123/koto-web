@@ -1,6 +1,6 @@
 import React from 'react'
 export default function Invite(){
-  const invite = 'https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands'
+  const invite = 'https://discord.com/oauth2/authorize?client_id=1426892015337078815'
   const support = 'https://discord.gg/your-server'
   return (
     <section className='py-10'>

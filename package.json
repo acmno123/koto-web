@@ -7,6 +7,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -19,9 +22,5 @@
     "postcss": "^8.4.20",
     "autoprefixer": "^10.4.12",
     "@vitejs/plugin-react": "^4.0.0"
-    "engines": {
-  "node": "22.x"
-}
-
   }
 }

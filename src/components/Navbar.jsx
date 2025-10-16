@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
-  const invite = 'https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands'
+  const invite = 'https://discord.com/oauth2/authorize?client_id=1426892015337078815'
 
   return (
     <header className="bg-white/70 backdrop-blur sticky top-0 z-40">

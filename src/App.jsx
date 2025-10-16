@@ -1,31 +1,25 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import Home from './pages/Home'
-import Pricing from './pages/Pricing'
 import Features from './pages/Features'
+import Pricing from './pages/Pricing'
 import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Invite from './pages/Invite'
 
 export default function App() {
+  const location = useLocation()
   return (
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow max-w-6xl mx-auto p-6 w-full">
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/features" element={<Features />} />
-  <Route path="/pricing" element={<Pricing />} />
-  <Route path="/gallery" element={<Gallery />} />
-  <Route path="/about" element={<About />} />
-  <Route path="/invite" element={<Invite />} />
-</Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        {[Home, Features, Pricing, Gallery, About, Invite].map((Page, idx)=>
+          <Route key={idx} path={`/${Page.name.toLowerCase()}`} element={
+            <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={{duration:0.5}}>
+              <Page />
+            </motion.div>
+          } />
+        )}
+      </Routes>
+    </AnimatePresence>
   )
 }

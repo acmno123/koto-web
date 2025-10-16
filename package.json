@@ -19,5 +19,9 @@
     "postcss": "^8.4.20",
     "autoprefixer": "^10.4.12",
     "@vitejs/plugin-react": "^4.0.0"
+    "engines": {
+  "node": "22.x"
+}
+
   }
 }

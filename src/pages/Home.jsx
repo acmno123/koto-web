@@ -1,25 +1,39 @@
 import React from 'react'
-export default function Home(){
-  const invite = 'https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot%20applications.commands'
+import { motion } from 'framer-motion'
+
+export default function Home() {
   return (
-    <section className='grid md:grid-cols-2 gap-8 items-center py-10'>
-      <div>
-        <h1 className='text-4xl font-extrabold'>Koto — 你的 Discord 小幫手</h1>
-        <p className='mt-4 text-slate-600'>整合 Slash 指令、等級系統、AI 聊天、梗圖、天氣、音樂等功能，幫你的社群更有溫度。</p>
-        <div className='mt-6 flex items-center gap-3'>
-          <a href={invite} target='_blank' rel='noreferrer' className='px-5 py-3 bg-sky-600 text-white rounded-lg shadow'>立即邀請</a>
-          <a href='/invite' className='px-4 py-3 border rounded-lg'>邀請說明</a>
-        </div>
-      </div>
-      <div className='bg-white rounded-2xl shadow-lg p-6'>
-        <div className='flex items-center gap-4'>
-          <div className='w-16 h-16 rounded-lg bg-sky-50 flex items-center justify-center font-bold'>K</div>
-          <div>
-            <h3 className='font-bold'>Koto • v3</h3>
-            <p className='text-sm text-slate-500'>已支援 Slash Commands、AI 與音樂播放</p>
-          </div>
-        </div>
-      </div>
+    <section className="py-10 bg-gradient-to-r from-sky-100 to-indigo-200 min-h-screen">
+      <motion.h1
+        className="text-5xl font-bold text-center mb-6"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        歡迎來到 KotoBot
+      </motion.h1>
+
+      <motion.p
+        className="text-center text-lg text-slate-600 mb-6"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+      >
+        你的 Discord 好幫手，支援自動公告與各種指令功能！
+      </motion.p>
+
+      <motion.div
+        className="text-center"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <a
+          href="/invite"
+          className="px-8 py-3 bg-sky-600 text-white rounded-lg shadow-lg hover:bg-sky-700 transition"
+        >
+          立即邀請
+        </a>
+      </motion.div>
     </section>
   )
 }

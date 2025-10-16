@@ -2,5 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* simple theme */
-body { @apply bg-gradient-to-b from-sky-50 to-white text-slate-800; }
+body {
+  @apply bg-slate-50 text-slate-800;
+}

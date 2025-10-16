@@ -1,5 +1,5 @@
 body {
-  @apply bg-gradient-to-r from-sky-100 to-indigo-200;
+  @apply bg-gradient-to-r from-indigo-500 to-sky-400;
   background-size: 200% 200%;
   animation: gradientShift 15s ease infinite;
 }
